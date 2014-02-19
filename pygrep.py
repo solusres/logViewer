@@ -4,10 +4,10 @@ from glob import glob
 # -i   : case insensitive search
 # -C 3 : with three lines of context on either side
 base = "egrep -i -C 3 %s"
-files = glob("*.log")
 
 def do(query):
     command = base % query
+    files = glob("*.log")
     
     results = None
     
